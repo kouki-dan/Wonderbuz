@@ -4,7 +4,7 @@ import os
 
 from app.HomeHandler import HomeHandler
 from app.AuthHandlers import AuthLoginHandler, AuthLogoutHandler
-
+import secrets
 
 class Application(tornado.web.Application):
   def __init__(self):
@@ -17,7 +17,7 @@ class Application(tornado.web.Application):
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),
         xsrf_cookies=True,
-        cookie_secret="SECRET",
+        cookie_secret=secrets.cookie_secret,
         login_url="/auth/login",
         debug=True,
         )
