@@ -1,8 +1,8 @@
 Wonderbuz
 =========
 
-Your knowledge is forever.
-The other knowledge is yours.
+Your knowledge is forever.  
+The others knowledge are yours.
 
 
 Wonderbuzという名前のWebサービスです。
