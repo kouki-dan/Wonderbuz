@@ -13,7 +13,7 @@ Base = sqlalchemy.ext.declarative.declarative_base()
 
 class User(Base):
   __tablename__ = 'user'
-  id = Column(Integer, Sequence('user_id_sqq'), primary_key=True)
+  id = Column(Integer, primary_key=True)
   screen_name = Column(String(12))
   name = Column(String(12))
   image = Column(String(128))
@@ -32,7 +32,7 @@ class User(Base):
 
 class Wonder(Base):
   __tablename__ = "wonder"
-  id = Column(Integer, Sequence('wonder_id_sqq'), primary_key=True)
+  id = Column(Integer, primary_key=True)
   polite_id = Column(String(12), unique=True)
   name = Column(String(64))
 # relation for foreign key
